@@ -18,15 +18,15 @@
         rows: [
           {
             key: {
-              text: "NHS number"
+              text: "Do you have symptoms?"
             },
             value: {
-              text: "985 777 3456"
+              text: data.hasSymptoms
             },
             actions: {
               items: [
                 {
-                  href: "#",
+                  href: "/magical-powers",
                   text: "Change",
                   visuallyHiddenText: "NHS number"
                 }
@@ -35,113 +35,40 @@
           },
           {
             key: {
-              text: "Name"
+              text: "Details of symptoms"
             },
             value: {
-              text: "Kevin Francis"
+              text: data.symptoms
             },
             actions: {
               items: [
                 {
-                  href: "#",
+                  href: "/symptoms",
                   text: "Change",
                   visuallyHiddenText: "name"
                 }
               ]
             }
-          },
-          {
-            key: {
-              text: "Date of birth"
-            },
-            value: {
-              html: "15 March 1984"
-            },
-            actions: {
-              items: [
-                {
-                  href: "#",
-                  text: "Change",
-                  visuallyHiddenText: "date of birth"
-                }
-              ]
-            }
-          },
-          {
-            key: {
-              text: "Home address"
-            },
-            value: {
-              html: '8 Bridgewater Place<br>Leeds<br>LS11 5BZ'
-            },
-            actions: {
-              items: [
-                {
-                  href: "#",
-                  text: "Change",
-                  visuallyHiddenText: "home address"
-                }
-              ]
-            }
           }
         ]
       }) }}
 
-      <h2 class="nhsuk-heading-m">
-        Medical details
-      </h2>
 
-      {{ summaryList({
-        rows: [
-          {
-            key: {
-              text: "Allergies"
-            },
-            value: {
-              text: "No allergies"
-            },
-            actions: {
-              items: [
-                {
-                  href: "#",
-                  text: "Change",
-                  visuallyHiddenText: "allergies"
-                }
-              ]
-            }
-          },
-          {
-            key: {
-              text: "Conditions"
-            },
-            value: {
-              html: "Asthma <br> Disabilities, including physical and learning disabilities"
-            },
-            actions: {
-              items: [
-                {
-                  href: "#",
-                  text: "Change",
-                  visuallyHiddenText: "conditions"
-                }
-              ]
-            }
-          }
-        ]
-      }) }}
+
 
       <h2 class="nhsuk-heading-m">
         Now send your application
       </h2>
 
       <p>
-        Your details will be sent to Rose Medical Practice to begin your registration.
+        Your details will be sent to Grand Poobaa Central Offices to begin your initiation.
       </p>
 
-      <form action="/form-handler" method="post" novalidate>
+      <form action="/done" method="post" novalidate>
         {{ button({
           text: "Confirm and send"
         }) }}
+        
       </form>
 
     </div>
