@@ -7,8 +7,8 @@
     <div class="nhsuk-grid-column-two-thirds">
 
       {{ panel({
-        titleText: "Booking complete",
-        text: "We have sent you a confirmation email"
+        titleText: "You are ascending!",
+        text: "We have sent you a telepathic transmission"
       }) }}
 
       <h2 class="nhsuk-heading-m">Your magical initiation ceremony details </h2>
@@ -41,9 +41,42 @@
         ]
       }) }}
 
-      <p>
-        <a href="#">Tell us about your experience using this service</a>
-      </p>
+      {% from 'do-dont-list/macro.njk' import list %}
+
+{{ list({
+  title: "Do",
+  type: "tick",
+  items: [
+    {
+      text: "use your powers for good"
+    },
+    {
+      text: "develop new magical powers regularly"
+    },
+    {
+      text: "find a Familiar from the animal kingdom and develop a working magical relationship with them"
+    }
+  ]
+}) }}
+
+{{ list({
+  title: "Don't",
+  type: "cross",
+  items: [
+    {
+      text: "use your magical powers for evil"
+    },
+    {
+      text: "don't judge the non-magicals"
+    },
+    {
+      text: "wear embarassing clothes. having magical powers is no excuse for dressing like Broomhilda"
+    },
+    {
+      text: "transmit your powers to a non-magical person. It won't work and could kill them"
+    }
+  ]
+}) }}
 
     </div>
   </div>

@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% from 'panel/macro.njk' import panel %}
+{% from "summary-list/macro.njk" import summaryList %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      {{ panel({
+        titleText: "Booking complete",
+        text: "You're not eligible"
+      }) }}
+
+  
+
+
+      <p>
+        <a href="#">Keep trying to receive powers!</a>
+      </p>
+
+    </div>
+  </div>
+{% endblock %}
