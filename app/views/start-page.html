@@ -7,8 +7,18 @@
 
 {% block beforeContent %}
   {{ breadcrumb({
-    href: "/",
-    text: "Back"
+    items: [
+      {
+        href: "#",
+        text: "Home"
+      },
+      {
+        href: "#",
+        text: "Section"
+      }
+    ],
+    href: "#",
+    text: "Subsection"
   }) }}
 {% endblock %}
 
@@ -22,7 +32,7 @@
 
       {{ warningCallout({
         heading: "There's an outbreak of magical powers!",
-        text: "Answer these questions to find out if you have any and what they are."
+        text: "Answer these questions to find out whether you're eligible for initiation."
       }) }}      
 
       <p>Use this service if you think you may have magical powers.</p>
